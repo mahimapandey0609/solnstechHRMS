@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+
+<%- include('partials/nav') %>
+
+
+<div class="container centered">
+
+     <div class="jobbox">
+  <form action="/addinterview" method = "POST" autocomplete="off" >
+    <h2> Schedule Interview</h2>
+  
+   
+
+    <div class="inputBox">
+        
+      <select id="country" name="interviewName">
+       <option value="select">Select Interview Name</option>
+       <option value="None">None</option>
+       <option value="Online Interview">Online Interview</option>
+       <option value="Offline Interview">Offline Interview</option>
+       <option value="Internal Interview">Internal Interview</option>
+       <option value="General Interview">General Interview</option>
+       <option value="Others">Others</option>
+     </select>
+     <!-- <span> Relationship </span> -->
+     <i></i>
+ </div>
+    <div class="inputBox" >
+      <input type="date" required="required" name="interviewFrom">
+      <span>From</span>
+      <i></i>
+    </div>
+    <div class="inputBox" >
+      <input type="date" required="required" name="interviewTo">
+      <span>To</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" name="interviewCandidateName">
+      <span>Candidate Name</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" name="interviewDept">
+      <span>Department Name</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" name="interviewTitle">
+      <span>Posting Tilte</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" name="interviewStatus">
+      <span>Interview Status</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" name="interviewOwner">
+      <span>Interview Owner</span>
+      <i></i>
+    </div>
+    
+    
+    
+
+    <input type="submit" value="Add">
+  </form>
+</div>
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,91 @@
+<%- include('partials/header') %>
+
+
+<%- include('partials/nav') %>
+
+
+<div class="container centered">
+
+     <div class="candidatebox">
+  <form action="/addcandidate" method = "POST" autocomplete="off" >
+    <h2>Add Candidates</h2>
+  
+   
+
+    <div class="inputBox" >
+        <input type="text" required="required" name="refer">
+        <span>Referring for job</span>
+        <i></i>
+      </div>
+    <div class="inputBox" >
+      <input type="number" required="required" name="candidateId">
+      <span>Candidate ID</span>
+      <i></i>
+    </div>
+    <div class="inputBox" >
+      <input type="text" required="required" name="candidateName">
+      <span>Candidate Name</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="email" required="required" name="candidateEmail">
+      <span>Email</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="number" required="required" name="candidateMobile">
+      <span>Mobile</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" name="currentjobtitle">
+      <span>Current job title</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" name="currentemployer">
+      <span>Current employer</span>
+      <i></i>
+    </div>
+    
+    
+    <div class="inputBox">
+        
+     <select id="country" name="relationship">
+      <option value="select">Select Relationship with the candidate</option>
+      <option value="none">None</option>
+      <option value="PersonallyKnown">Personally Known</option>
+      <option value="FormerColleague">Former Colleague</option>
+      <option value="SociallyConnected">Socially Connected</option>
+      <option value="Gottheresumethroughacommonfriend">Got the resume through a common friend</option>
+      <option value="others">Others</option>
+    </select>
+    <!-- <span> Relationship </span> -->
+    <i></i>
+</div>
+<div class="inputBox">
+        
+    <select id="country" name="knownperiod">
+     <option value="select">Select known period</option>
+     <option value="none">None</option>
+     <option value="1-2years">1-2 years</option>
+     <option value="3-5years">3-5 years</option>
+     <option value="5+years">5+ years</option>
+   </select>
+   <!-- <span> Relationship </span> -->
+   <i></i>
+</div>
+ <div class="inputBox">
+    
+    <textarea id="subject" name="subject" placeholder="Write Note..." style="height:50px"></textarea>
+    <!-- <span>Notes</span> -->
+    <i></i>
+</div>
+    <input type="submit" value="Add">
+  </form>
+</div>
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

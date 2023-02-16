@@ -1,0 +1,54 @@
+<%- include('partials/header') %>
+<div class="letter">
+<%- include('partials/nav') %>
+
+<button id="pdfButton">Get PDF</button>
+
+<div class="appointment-letter" id="generatePdf">
+  <div id="id">
+    <p style="text-align: center;font-size:40px; color: #254a76; ">   Offer Letter
+    </p>
+   
+    <p style="padding-top: 60px;" > Dear <%= employee.employeeName %>, <br/><br/>
+      Address : <%= employee.employeeAdd %><br/>
+     
+    </p>
+    <p> Date : <%= employee.generatedDate %> </p>
+    <p style="padding-top: 30px;">
+        Greetings from SOLNSTECH,
+    </p>
+     <p> Congratulations on your decision of partnering with us in our endeavor to change the face of solution
+        provider.
+        </p>
+    <p> We are pleased to offer you the Position on the following terms and conditions</p> 
+    <p  >Designation - <%= employee.employeeDesignation  %></p> 
+    <p>Department - <%= employee.employeeDept %></p>  
+    <p>Employment Type - <%= employee.employeetype %></p>  
+    <p>Date of Joining - <%= employee.employeedoj %></p>  
+    <p>Role Location - <%= employee.employeeRole %></p> <br/>
+    <p>Compensation Details - </p>  
+    <p>CTC per Annum -  <%= employee.employeeCTC %></p> <br/>
+    
+     <p>.. YOU WILL BE GOVERNED BY AND AGREE TO ABIDE BY THE GENERAL TERMS AND CONDITIONS OF
+        THE SERVICE OF THE COMPANY</p>
+     <p>....You are requested to carry necessary documents on your joining date , as enclosed in Annexures B. </p>  
+    <p>You are requested to join the service of the company not later than <%= employee.employeeduedate %></p>
+     <p>We take this opportunity to thank you for the interest you have shown in our organization and looking</p><br/>
+        <p>forward to welcoming you on board for a future career with us.</p>
+        <p>Kindly , submit the signed copy of this offer letter on your date of joining</p><br/>
+    <p style="float:left; width: 70%; padding-right: 400px;" >Your sincerely,<br/>
+      Team Solnstech.<br/>
+      Manisha Market M41 <br/>
+      Bhopal M.P- 462016.<br/>
+      INDIA 
+  </p>
+   <br/>
+    <p style="float:right;width:30%;">Accept Job offer by signing<br/>
+    _____________________ <br/>
+  
+   
+  
+  </p>
+</div>
+</div>
+<%- include('partials/footer') %>

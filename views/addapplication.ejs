@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+
+
+<%- include('partials/nav') %>
+
+
+<div class="container centered">
+
+     <div class="assessmentbox"  style="height: 720px;">
+  <form action="/addapplication" method = "POST" autocomplete="off" >
+    <h2>Add Application</h2>
+  
+    <div class="inputBox" >
+        <input type="number" required="required" name="rating">
+        <span>Rating</span>
+        <i></i>
+      </div>
+
+    <div class="inputBox" >
+        <input type="text" required="required" name="applicationName">
+        <span>Application Name </span>
+        <i></i>
+      </div>
+    <div class="inputBox" >
+      <input type="text" required="required" name="hiringpipeline">
+      <span>Hiring Pipeline</span>
+      <i></i>
+    </div>
+    <div class="inputBox" >
+      <input type="text" required="required" name="applicationstatus">
+      <span>Application Status</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="number" required="required" name="applicationid">
+      <span>Application Id</span>
+      <i></i>
+    </div>
+    
+    <div class="inputBox" >
+        <input type="text" required="required" name="applicationposting">
+        <span>Posting Title</span>
+        <i></i>
+      </div>
+    
+   
+ 
+    <input type="submit" value="Add">
+  </form>
+</div>
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

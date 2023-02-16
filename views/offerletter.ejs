@@ -1,0 +1,77 @@
+<%- include('partials/header') %>
+
+
+<%- include('partials/nav') %>
+
+
+<div class="container centered">
+
+     <div class="candidatebox">
+  <form action="/offerletter" method = "POST" autocomplete="off" >
+    <h2>Generate Offer Letter</h2>
+  
+    
+
+    <div class="inputBox" >
+        <input type="text" required="required" name="employeeName">
+        <span>Employee Name</span>
+        <i></i>
+      </div>
+      <div class="inputBox" >
+        <input type="text" required="required" name="employeeAdd">
+        <span>Employee Address</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="date" required="required" name="generatedDate">
+        <span>Generated Date</span>
+        <i></i>
+      </div>
+   
+    <div class="inputBox" >
+      <input type="text" required="required" name="employeeDesignation">
+      <span>Designation</span>
+      <i></i>
+    </div>
+    <div class="inputBox" >
+        <input type="text" required="required" name="employeeDept">
+        <span>Department</span>
+        <i></i>
+      </div>
+      <div class="inputBox" >
+        <input type="text" required="required" name="employeetype">
+        <span>Employement Type</span>
+        <i></i>
+      </div>
+    
+      <div class="inputBox">
+        <input type="date" required="required" name="employeedoj">
+        <span>Date of Joining</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="employeeRole">
+        <span>Role Location</span>
+        <i></i>
+      </div>
+
+    <div class="inputBox">
+        <input type="number" required="required" name="employeeCTC">
+        <span>CTC per Annum</span>
+        <i></i>
+      </div>
+    
+      <div class="inputBox">
+        <input type="date" required="required" name="employeeduedate">
+        <span>Due date for Joining</span>
+        <i></i>
+      </div>
+ 
+    <input type="submit" value="Add">
+  </form>
+</div>
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

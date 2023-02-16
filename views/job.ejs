@@ -1,0 +1,74 @@
+
+<%- include('partials/header') %>
+<div class="color">
+<%- include('partials/nav') %>
+
+
+    <div class="job">
+        <div class="job-main">
+            <div >
+               
+                <a class="job-content" href="#"><i class="fa fa-file" aria-hidden="true"></i>
+                  Job Openings</a>
+            </div> 
+            <div class="nav-menu">
+                <div class="menu">
+                    <!-- <button class="p-1"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Jobs</button> -->
+                    <a class="btn btn-light btn-sm" href="/addjob" role="button"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Job</a>
+                </div>
+            </div>
+
+       </div>
+    </div>
+
+    <div class="row">
+<div class="col-sm-2">
+     <%- include('partials/sidebar') %>
+
+</div>
+<div class="col-sm-8">
+
+  
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Job Opening ID</th>
+              <th scope="col">Posting Title</th>
+              <th scope="col">Assigned Recruiter(s)</th>
+              <th scope="col">Target Date</th>
+              <th scope="col">Job Opening Status</th>
+              <th scope="col">City</th>
+              <th scope="col">Department Name</th>
+              <th scope="col">Hiring Manager</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% UserWithJob.forEach(function(job){   %>
+            <tr>
+              <td scope="row"> 
+                <form action="/deletejob" method="POST">
+                    <input type="checkbox" name="checkbox" value ="<%= job._id %>" onclick="this.form.submit()">
+                </form>    
+                </td>
+              <th scope="row"><%= job.jobId %> </th>
+              <td id="data"><%= job.jobTitle %></td>
+              <td> <%= job.jobRecruiter  %></td>
+              <td><%= job.jobdate %></td>
+              <td><%= job.jobstatus %></td>
+              <td><%= job.jobcity %></td>
+              <td><%= job.jobdept %></td>
+              <td><%= job.jobmanager %></td>
+            </tr>
+           <% })  %>
+          </tbody>
+        </table>
+      
+      </div>
+</div>
+
+    </div>
+  </div>
+<%- include('partials/footer') %>

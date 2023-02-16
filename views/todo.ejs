@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+
+<div class="color">
+<%- include('partials/nav') %>
+
+<div class="job">
+  <div class="job-main">
+      <div >
+         
+          <a class="job-content" href="#"><i class="fa fa-solid fa-briefcase mr-2"></i> iNotes</a>
+      </div> 
+      <div class="nav-menu">
+          <div class="menu d-flex align-items-center flex-nowrap">
+              <!-- <button class="p-1"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Jobs</button> -->
+              <!-- <a class="btn btn-light btn-sm" href="/addassessment" role="button"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Assessment</a> -->
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchtxt">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+          </div>
+      </div>
+
+ </div>
+</div>
+
+<div class="todo">
+
+<h1 class="text-center " style="color: black;">Welcome to iNotes</h1>
+
+<div class="container todo-body ">
+  <h3>Add title</h3>
+  <input type="text" class="form-control" placeholder="Enter your note title..." aria-label="Username" id="username"
+    name="username">
+
+  <div class="form-group shadow-textarea my-4">
+
+    <label for="exampleFormControlTextarea6" class="my-2">
+
+      <h3 class="head">Add a Note</h3>
+    </label>
+    <textarea class="form-control" id="addtxt" rows="3" placeholder="Write your notes here..."></textarea>
+  </div>
+  <input class="btn btn-primary btn-dark btn-lg my-2" type="submit" value="Submit" id="addbtn">
+
+
+</div>
+<div class="container my-4">
+  <hr>
+  <h2 class="head " style="color: black;">Your Notes👇</h2>
+  <hr>
+  <div id="notes" class="row container-fluid"> </div>
+
+
+</div>
+</div>
+</div>
+<%- include('partials/footer') %>

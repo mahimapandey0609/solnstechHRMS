@@ -1,0 +1,81 @@
+<%- include('partials/header') %>
+<div class="color">
+<%- include('partials/nav') %>
+
+<div class="job">
+    <div class="job-main">
+        <div >
+           
+            <a class="job-content" href="#"><i class="fa fa-user" aria-hidden="true"></i> Candidate</a>
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+                <!-- <button class="p-1"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Jobs</button> -->
+                <a class="btn btn-light btn-sm" href="/addcandidate" role="button"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Candidate</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+<div class="col-sm-2">
+ <%- include('partials/sidebar') %>
+
+</div>
+<div class="col-sm-8">
+
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Referring for job</th>
+          <th scope="col">Candidate ID</th>
+          <th scope="col">Candidate Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Current job title</th>
+          <th scope="col">Current employer</th>
+          <th scope="col">Relationship</th>
+          <th scope="col">Known Period</th>
+          <th scope="col">Note</th>
+
+        </tr>
+      </thead>
+      <tbody>
+       
+        <%  candidate.forEach(function(candidate){ %>
+
+         <tr>
+         
+          <td scope="row"> 
+            <form action="/deletecandidate" method="POST">
+                <input type="checkbox" name="checkbox" value ="<%= candidate._id %>" onclick="this.form.submit()">
+            </form>    
+            </td>
+          <td scope="row"><%= candidate.refer %> </td>
+          <td id="data"><%= candidate.candidateId %></td>
+          <td><%= candidate.candidateName %> </td>
+          <td><%= candidate.candidateEmail %></td>
+          <td><%= candidate.candidateMobile %></td>
+          <td><%= candidate.currentjobtitle %></td>
+          <td><%= candidate.currentemployer %></td>
+          <td><%= candidate.relationship %></td>
+          <td><%= candidate.knownperiod %></td>
+          <td><%= candidate.subject %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  
+  </div>
+</div>
+
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

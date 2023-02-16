@@ -1,0 +1,70 @@
+<%- include('partials/header') %>
+<div class="color">
+<%- include('partials/nav') %>
+
+<div class="job">
+    <div class="job-main">
+        <div >
+           
+            <a class="job-content" href="#"><i class="fa fa-solid fa-briefcase mr-2"></i> Application</a>
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+                <!-- <button class="p-1"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Jobs</button> -->
+                <a class="btn btn-light btn-sm" href="/addapplication" role="button"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Application</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+<div class="col-sm-2">
+ <%- include('partials/sidebar') %>
+
+</div>
+<div class="col-sm-8">
+
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Rating</th>
+          <th scope="col">Application Name</th>
+          <th scope="col">Hiring Pipeline</th>
+          <th scope="col">Application Status</th>
+          <th scope="col">Application Id</th>
+          <th scope="col">Posting Title</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <% application.forEach(function(application){  %>
+         <tr>
+          <td scope="row"> 
+            <form action="/deleteapplication" method="POST">
+                <input type="checkbox" name="checkbox" value ="<%= application._id %>" onclick="this.form.submit()">
+            </form>    
+            </td>
+            <td id="data"> <%= application.rating %></td>
+            <td id="data"> <%= application.applicationName %></td>
+         <td id="data"> <%= application.hiringpipeline %></td>
+          <td><%= application.applicationstatus %></td>
+          <td><%= application.applicationid %></td>
+          <td><%= application.applicationposting %></td>
+           </tr>
+       <% })  %>
+      </tbody>
+    </table>
+  
+  </div>
+</div>
+
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,78 @@
+<%- include('partials/header') %>
+<div class="color">
+<%- include('partials/nav') %>
+
+<div class="job">
+    <div class="job-main">
+        <div >
+           
+            <a class="job-content" href="#"><i class="fa fa-user" aria-hidden="true"></i> Interview</a>
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+                <!-- <button class="p-1"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Jobs</button> -->
+                <a class="btn btn-light btn-sm" href="/addinterview" role="button"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Interview</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+<div class="col-sm-2">
+ <%- include('partials/sidebar') %>
+
+</div>
+<div class="col-sm-8">
+
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Interview Name</th>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Candidate Name</th>
+          <th scope="col">Department Name</th>
+          <th scope="col">Posting Title</th>
+          <th scope="col">Interview Status</th>
+          <th scope="col">Interview Owner</th>
+         
+
+        </tr>
+      </thead>
+      <tbody>
+       
+        <% interview.forEach(function(interview){  %>
+
+         <tr>
+          <td scope="row"> 
+            <form action="/deleteinterview" method="POST">
+                <input type="checkbox" name="checkbox" value ="<%= interview._id %>" onclick="this.form.submit()">
+            </form>    
+            </td>
+          <td scope="row"><%= interview.interviewName %> </td>
+          <td id="data"><%= interview.interviewFrom %></td>
+          <td><%= interview.interviewTo %> </td>
+          <td><%= interview.interviewCandidateName %></td>
+          <td><%= interview.interviewDept %></td>
+          <td><%= interview.interviewTitle %></td>
+          <td><%= interview.interviewStatus %></td>
+          <td><%= interview.interviewOwner %></td>
+         
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  
+  </div>
+</div>
+
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

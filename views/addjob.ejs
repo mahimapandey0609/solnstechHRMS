@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<div class="container centered">
+
+    
+
+      
+      <div class="jobbox">
+    <form action="/addjob" method = "POST" autocomplete="off">
+      <h2>Add Jobs</h2>
+      <div class="inputBox" >
+        <input type="number" required="required" name="jobId">
+        <span>Job Opening ID</span>
+        <i></i>
+      </div>
+      <div class="inputBox" style="float: left;">
+        <input type="text" required="required" name="jobTitle">
+        <span>Posting Title</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="jobRecruiter">
+        <span>Assigned Recruiter(s)</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="date" required="required" name="jobdate">
+        <span>Target Date</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="jobstatus">
+        <span>Job Opening Status </span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="jobcity">
+        <span>City</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="jobdept">
+        <span>Department Name</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="jobmanager">
+        <span>Hiring Manager</span>
+        <i></i>
+      </div>
+      
+      <input type="submit" value="Add">
+    </form>
+  </div>
+</div>
+
+</div>
+<%- include('partials/footer') %>

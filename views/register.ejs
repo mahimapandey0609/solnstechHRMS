@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+<div class="centered">
+<div class="container mt-5 hello">
+  <h1 class="mb-3" >Register</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="box">
+        <form action = "/register" method = "POST" autocomplete="off">
+          <h2>Sign in</h2>
+          <div class="inputBox">
+            <input type="text" required="required" name="username">
+            <span>Email</span>
+            <i></i>
+          </div>
+          <div class="inputBox">
+            <input type="password" required="required" name="password">
+            <span>Password</span>
+            <i></i>
+          </div>
+          <div class="links">
+            
+            <a href="#">Signin</a>
+          </div>
+          <input type="submit" value="Register">
+        </form>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<%- include('partials/header') %>

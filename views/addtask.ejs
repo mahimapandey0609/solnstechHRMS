@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+
+<%- include('partials/nav') %>
+
+
+<div class="container centered">
+
+     <div class="assessmentbox p-1" style="height: 700px;">
+  <form action="/addtask" method = "POST" autocomplete="off" >
+    <h2> Add Task</h2>
+  
+   
+    <div class="inputBox">
+        <input type="text" required="required" name="taskName">
+        <span>Task Name</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="assignedTo">
+        <span>Assigned To</span>
+        <i></i>
+      </div>
+      <div class="inputBox" >
+        <input type="date" required="required" name="assignedDate">
+        <span>Assigned Date</span>
+        <i></i>
+      </div>
+      <div class="inputBox" >
+        <input type="date" required="required" name="dueDate">
+        <span>Due Date</span>
+        <i></i>
+      </div>
+      <div class="inputBox" >
+        <select id="country"  name="taskStatus" >  
+            <option  value="Select Task Status"> Select</option>   
+            <option  value="Started"> Started</option>      
+            <option  value="Completed">Completed</option>
+            <option  value="In-Process">In-Process</option>
+            <option value="On-hold">On-hold</option>
+
+       </select>
+        <i></i>
+      </div>
+    
+
+   
+   
+    
+    
+    
+    
+
+    <input  type="submit" value="Add">
+  </form>
+</div>
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+
+
+<%- include('partials/nav') %>
+
+
+<div class="container centered">
+
+     <div class="assessmentbox">
+  <form action="/addassessment" method = "POST" autocomplete="off" >
+    <h2>Add Assessment</h2>
+  
+    
+
+    <div class="inputBox" >
+        <input type="text" required="required" name="assessmentName">
+        <span>Assessment Name </span>
+        <i></i>
+      </div>
+    <div class="inputBox" >
+      <input type="number" required="required" name="noOfQuestions">
+      <span>No of Questions</span>
+      <i></i>
+    </div>
+    <div class="inputBox" >
+      <input type="text" required="required" name="assessmentOwner">
+      <span>Assessment Owner</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="date" required="required" name="modifiedDate">
+      <span>Modified Time</span>
+      <i></i>
+    </div>
+    
+    
+    
+   
+ 
+    <input type="submit" value="Add">
+  </form>
+</div>
+</div>
+
+
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+<div class="color">
+<%- include('partials/nav') %>
+
+<div class="job">
+    <div class="job-main">
+        <div >
+           
+            <a class="job-content" href="#"><i class="fa fa-user mr-2" aria-hidden="true"></i>Events</a>
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+                <!-- <button class="p-1"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Jobs</button> -->
+                <a class="btn btn-light btn-sm" href="/addevent" role="button"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add Events</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+<div class="col-sm-2">
+ <%- include('partials/sidebar') %>
+
+</div>
+<div class="col-sm-8">
+
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar" ">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+      <thead>
+        <tr>
+            <th scope="col"></th>
+          <th scope="col">Event Name</th>
+         <th scope="col"> Date</th>
+          
+
+
+        </tr>
+      </thead>
+      <tbody>
+       
+        <%  event.forEach(function(event){ %>
+
+         <tr>
+            <td scope="row"> 
+            <form action="/deleteevent" method="POST">
+                <input type="checkbox" name="checkbox" value ="<%= event._id %>" onclick="this.form.submit()">
+            </form>    
+            </td>
+          <td scope="row"><%= event.eventName %> </td>
+          <td id="data"><%= event.eventDate  %></td>
+          
+    
+
+        </tr>
+        <% })  %>
+      </tbody>
+    </table>
+  
+  </div>
+</div>
+
+</div>
+
+
+</div>
+<%- include('partials/footer') %>
